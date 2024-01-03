@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --orange: #EE7100;
+    --main-color: rgb(13, 130, 130);
+}
+body{
+    font-size: 20px;
+    font-family: 'Mulish', sans-serif;
+    background-color: #F2F2F2;
+}
+
+a{
+    text-decoration: none;
+}
+ul li{
+    list-style: none;
+}
+
+button,
+input{
+    outline: none;
+    font-family: 'Mulish', sans-serif;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.grid_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(277px, 1fr));
+    gap: 20px;
+}
+.container{
+    max-width: 1170px;
+    margin: 0  auto;
+}
+
+header{
+    height: 80px;
+    border-radius: 0 0 10px 10px;
+    background-color: var(--main-color);
+    box-shadow:  0 0 5px gray;
+}
+
+.logo{
+    font-size: 150%;
+    color: white;
+    margin-left: 70px;
+    margin-top: 16px;
+}
+
+.main_nav{
+    gap: 40px;
+    margin-top: 20px;
+    margin-right: 50px;
+}
+
+.main_nav li a{
+    color: white;
+}
+
+.add_btn{
+    width: 70px;
+    height: 35px;
+    border-radius: 6px;
+    color: white;
+    border: none;
+    background-color: var(--orange);
+    margin-top: 50px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+section{
+    margin-top: 50px;
+}
+
+.card_title{
+    display: flex;
+    justify-content: center;
+}
+.main_card h2{
+    text-align: center;
+    font-size: 80%;
+    background-color: rgb(207, 207, 207);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 6px 6px 0 0;
+}
+
+.card_body{
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 0 5px gray;
+    padding: 20px 25px;
+    position: relative;
+    margin-top: -7px;
+}
+.card_body ul{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.card_body ul li{
+    font-size: 90%;
+    font-weight: 700;
+}
+
+.card_body ul li span{
+    font-weight: 300;
+}
+
+.card_body button{
+    margin-top: 10px;
+    color: white;
+    background-color: rgb(186, 0, 0);
+    border: none;
+    width: 60px;
+    height: 25px;
+    font-weight: 500;
+    font-size: 80%;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.card_body a{
+    margin-top: 10px;
+    display: inline-block;
+    width: 60px;
+    height: 25px;
+    font-weight: 500;
+    font-size: 80%;
+    border-radius: 6px;
+    color: white;
+    background-color: var(--orange);
+    text-align: center;
+    padding-top: 3px;
+}
+
+
+/* //////////////////////// */
+
+
+.background_shadow{
+    display: block;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.377);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.modal_body{
+    width: 80vw;
+    background-color: white;
+    box-shadow: 0 0 5px gray;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20vh;
+    border-radius: 6px;
+}
+
+.modal_header{
+    display: flex;
+    justify-content: center;
+    font-size: 80%;
+    color: rgb(52, 52, 169);
+    padding-top: 20px;
+}
+
+.modal_grid{
+    display: grid;
+    padding: 20px 50px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.modal_inp_container input{
+    width: 100%;
+    height: 33px;
+    border: 1px solid gray;
+    border-radius: 0 6px 6px 6px;
+    text-indent: 5px;
+}
+
+.modal_inp_container label{
+    display: inline-block;
+    background-color: rgb(207, 207, 207);
+    padding: 0 8px;
+    border-radius: 6px 6px 0 0;
+    font-size: 80%;
+    height: 25px;
+    padding-top: 4px;
+}
+
+.modal_btn{
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.modal_btn button{
+    border: none;
+    padding: 6px 8px;
+    border-radius: 6px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+.close_btn{
+    background-color: rgb(186, 0, 0);
+}
+
+.save_btn{
+    background-color: var(--orange);
+}

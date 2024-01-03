@@ -1,0 +1,1 @@
+export const mainApi = 'https://logistica.zakirabd.com/public/api'

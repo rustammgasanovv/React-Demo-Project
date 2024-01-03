@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import MainPage from './pages/MainPage'
+import CarsPage from './pages/CarsPage'
+import AvailableBrPage from './pages/AvailableBrPage'
+import WorkerPage from './pages/WorkerPage'
+import BranchPage from './pages/BranchPage'
+import Header from './component/Header'
+import AddBtn from './component/AddBtn'
+import CarsEdit from './pages/edit/CarsEdit'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export class App extends Component {
+  render() {
+    return (
+      <BrowserRouter>
+      <Header/>
+      <AddBtn />
+      <Routes>
+        <Route path='/' element={<MainPage/>}/>
+        <Route path='/cars' element={<CarsPage/>}/>
+        <Route path='/available-branch' element={<AvailableBrPage/>}/>
+        <Route path='/user' element={<WorkerPage/>}/>
+        <Route path='/branch' element={<BranchPage/>}/>
+        <Route path='cars/:id' element={<CarsEdit />}/>
+      </Routes>
+      </BrowserRouter>
+    )
+  }
 }
 
-export default App;
+export default App
